@@ -1,3 +1,5 @@
+
+
 var finances = [
 ['Jan-2010', 867884],
 ['Feb-2010', 984655],
@@ -86,3 +88,29 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+console.log ("Total Months: " + finances.length )
+
+var total = 0
+ let i;
+for (i =0; i < 86; i++)
+ {total = total + finances[i][1]
+    }
+
+console.log("$"+total);
+
+
+
+
+var financesChanges = [];
+
+for (i=0; i<86; i++)
+var profitLoses = finances[i][1];
+{``
+
+  financesChanges.push(finances[i+1][1]-finances[i][1])
+}
+
+
+console.log(financesChanges)
+
