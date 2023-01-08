@@ -89,6 +89,12 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+console.log ( "Company Financial Report")
+
+console.log ("---------------------------------------")
+
+
+// The total number of months included in the dataset.
 console.log ("Total Months: " + finances.length )
 
 var total = 0
@@ -97,20 +103,68 @@ for (i =0; i < 86; i++)
  {total = total + finances[i][1]
     }
 
-console.log("$"+total);
+console.log("Total Revenue: $" + total);
 
 
+// The average of the changes in Profit/Losses over the entire period.
 
-
-var financesChanges = [];
-
-for (i=0; i<86; i++)
-var profitLoses = finances[i][1];
-{``
-
-  financesChanges.push(finances[i+1][1]-finances[i][1])
+var financesChanges =[];
+for (i= 0; i < 85; i++){
+    var profitLoses = (finances[i][1])
+    financesChanges.push(finances[i+1][1]-finances[i][1]);
 }
 
 
-console.log(financesChanges)
+//console.log(financesChanges.length);
+
+console.log("Profit/Loses: $" + profitLoses);
+
+var avgProfitLoses = (profitLoses / financesChanges.length)
+console.log('Average Profit/Lose Change $'+ avgProfitLoses.toFixed(2));
+
+
+// The greatest Increase/Decrease in profits (date and amount) over the entire period.
+
+
+var highestEarnings = Math.max.apply(Math, financesChanges.map(function (i){
+    return i}))
+
+console.log( "Greatest Increase in Profits: $" + highestEarnings );
+
+var LowestEarnings = Math.min.apply(Math, financesChanges.map(function (i){
+    return i}))
+
+console.log( "Greatest Decrease in Profits; $" + LowestEarnings );
+
+//var maxfinances = max.finances(finances);
+
+var financesamount = finances.map(function(finances){
+    return finances[1]
+});
+
+// console.log(financesamount);
+
+var highestMonth = Math.max.apply(Math, financesamount.map(function (i){
+    return i}))
+
+    var lowestMonth = Math.min.apply(Math, financesamount.map(function (i){
+        return i}))
+
+let indexHighestDecreaseEarning = financesamount.indexOf(highestMonth);
+
+console.log(" Highest Month and Amount:" + finances[indexHighestDecreaseEarning]);
+
+
+let indexLowestIncreaseEarning= financesamount.indexOf(lowestMonth);
+
+console.log(" Lowest Month and Amount:" + finances[indexLowestIncreaseEarning]);
+;
+console.log ("---------------------------------------")
+
+
+
+
+
+
+
 

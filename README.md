@@ -1,14 +1,15 @@
 # console-finance
 
+ Psedueo code to complete help comple the challenge:
 
-///* The total number of months included in the dataset.
-//* find out length of finances array 
+/// The total number of months included in the dataset.
+//find out length of finances array 
 
-/// *The net total amount of Profit/Losses over the entire period.
-// *loop through the finances array and get the value of the profit/losses by accessing it manually
-// *var total = 0
-// *for i in finances
-// *  total = total + finances[i][1]
+///  The net total amount of Profit/Losses over the entire period.
+//  loop through the finances array and get the value of the profit/losses by accessing it manually
+//  var total = 0
+//  for i in finances
+//  total = total + finances[i][1]
 
 /// The average of the changes in Profit/Losses over the entire period.
 // create new array called it financeChanges to store changes for each months
@@ -19,7 +20,7 @@
 // Be careful on the last month finances[i+1] will not exist!
 // find out the length of financeChanges array
 // Calculate the total changes using the same method as the previous question
-// Calculate the averate
+// Calculate the average
 
 /// The greatest increase in profits (date and amount) over the entire period.
 // var highestEarning = 0
